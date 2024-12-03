@@ -1,0 +1,203 @@
+.BodyPerfil{
+    background-image: url("../images/bckgr_perfil.png");
+    background-position: center;
+    background-size: cover;
+}
+section.datosBulls{
+    
+    padding: 2.25rem;
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        .imagen-principal,.detail{
+            flex: 1 0 320px;
+        }
+        .imagen-principal{
+            img{
+                width: 100%;
+                border: 4px solid $rojo;
+                border-radius: 15px;
+            }
+        }
+        
+        .detail{
+            ul{
+                padding: 0.25rem 0.35rem;
+                li{
+                    display: flex;
+                    select,span{
+                        color: $blanco2;
+                        flex: 1 0 0;
+                        text-transform:uppercase;
+                    }
+                    select{
+                        background: rgba(0, 0, 0, .25);
+                    }
+                }
+            }
+            h6{
+                color: $blanco2;
+                background: linear-gradient(45deg,$azul,$rojo);
+                padding: 0.25rem 0.35rem;
+            }
+        }
+    }
+}
+section.ArbolGenealogico{
+    padding: 1rem 0;
+    .container{
+        .headersGeneracion{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+            background-color: rgba(255,255,255,.5);
+            h6{
+                flex: 1 0 0;
+                text-align: center;
+                font-size: 25px;
+                margin-bottom: 0;
+                padding: 0.5rem 0;
+            }
+        }
+        ul.generacion_1{
+            padding: 0;
+            li{
+                margin-bottom: 1rem;
+                font-size: 0;
+                div.cardBull{
+                    display: inline-block;
+                    width: calc((100% / 12) * 4);
+                    vertical-align: middle;
+                    justify-items: center;
+                    @media screen and (max-width: 768px) {
+                        .CardPerfilBull{
+                            display: block;
+                            img,p{
+                                width: 100%;
+                                
+                            }
+                        }
+                    } 
+                    
+                }
+                ul.generacion_2{
+                    width: calc((100% / 12) * 8);
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 0 0 0 1rem;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        left: -25%;
+                        top: 50%;
+                        content: "";
+                        display: block;
+                        height: 50%;
+                        width: 50%;
+                        border: 4px solid white;
+                        transform: translateY(-50%);
+                        border-right: 0px solid;
+                        border-radius: 15px;
+                    }
+                    
+                    li{
+                        
+                        div.cardBull{
+                            width: 50%;
+                            display: inline-block;
+                            .CardPerfilBull{
+                                display: flex;
+                                align-items: center;
+                                img,p{
+                                    width: 50%;
+                                    position: relative;
+                                    vertical-align: middle;
+                                    
+                                }
+                            }
+                            @media screen and (max-width: 768px) {
+                                .CardPerfilBull{
+                                    display: block;
+                                    img,p{
+                                        width: 100%;
+                                        
+                                    }
+                                }
+                            }
+                            
+                        }
+                        ul{
+                            padding: 0;
+                            width: 50%;
+                            display: inline-block;
+                            vertical-align: middle;
+                            position: relative;
+                            &::before{
+                                position: absolute;
+                                left: -50%;
+                                top: 50%;
+                                content: "";
+                                display: block;
+                                height: 60%;
+                                width: 70%;
+                                border: 4px solid white;
+                                transform: translateY(-50%);
+                                border-right: 0px solid;
+                                border-radius: 15px;
+                            }
+                            li{
+                                div.cardBull{
+                                    width: 100%;
+                                    display: inline-block;
+                                    .CardPerfilBull{
+                                        display: flex;
+                                        max-width: 100%;
+                                        img,p{
+                                            width: 50%;
+                                            position: relative;
+                                            vertical-align: middle;
+                                        }
+                                    }
+                                    @media screen and (max-width: 768px) {
+                                        .CardPerfilBull{
+                                            display: block;
+                                            img,p{
+                                                width: 100%;
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.CardPerfilBull{
+    background-color: $rojo;
+    position: relative;
+    width: 80%;
+    border-radius: 15px;
+    border: 2px solid $blanco2;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    @media (width >= 768px) {
+        border: 4px solid $blanco2;
+    }
+    p{
+        background-color: $rojo;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 0;
+        color: $blanco2;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 16px;
+    }
+}

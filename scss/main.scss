@@ -1,0 +1,87 @@
+//Variables color
+$azul : #17256B;
+$rojo : #A71135;
+$blanco : white;
+$blanco2 : #DDD;
+$negro : black;
+
+@mixin font-face($weight) {
+    font-family: "Roboto Condensed", sans-serif!important;
+    font-optical-sizing: auto!important;
+    font-weight: $weight!important;
+    font-style: normal;
+  }
+img{width: 100%;}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none!important;
+    list-style: none;
+    @include font-face(400);
+}
+h1,h2,h3,h4,h5,h6{
+    @include font-face(900);
+    color: $rojo;
+    line-height: 1;
+    span{
+        @include font-face(900);
+        
+    }
+}
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+
+.container{
+    width: 100%!important;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width:576px) {
+        width: 90%!important;
+    }
+    @media screen and (min-width:768px) {
+        width: 80%!important;
+    }
+}
+
+@import url('owl/owl.carousel.min.css');
+@import url('owl/owl.theme.default.min.css');
+.card{
+    background: none;
+    border: 0;
+}
+.v-one{
+    .card-title{
+        color: #A71135;
+        span{
+            color: $blanco;
+            display: block;
+        }
+    }
+    .card-text{
+        color: $blanco;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+@keyframes shadowBoxAnimated {
+    0% {
+        box-shadow: 1px 1px 30px $negro;
+        color: $azul!important;
+    }
+    50%{
+        box-shadow: 1px 1px 30px $azul;
+        color: $rojo!important;
+    }
+    100%{
+        box-shadow: 1px 1px 30px $negro;
+        color: $azul!important;
+    }
+    
+}
+
+@import 'header.scss';
+@import 'footer.scss';
+@import 'home.scss';
+@import 'perfil.scss';

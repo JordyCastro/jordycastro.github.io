@@ -1,0 +1,112 @@
+footer{
+    position: relative;
+    .cintaTextContactanos{
+        position: absolute;
+        top: 50%;
+        .tag-side-span{
+            display: block;
+            color: $blanco;
+            font-size: 35px;
+            &.tag-left{
+                transform: rotate(270deg);
+                left: 0;
+            }
+            &.tag-right{
+                transform: rotate(90deg);
+                right: 0;
+            }    
+        }
+    }
+    
+    .img-bg-footer{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        display: block;
+        z-index: -1;
+    }
+    .container{
+        padding: 20px 0;
+        .LogoPrincipalFooter{
+            max-width: 320px;
+            margin: 0 auto;
+            padding: 30px 0;
+            img{
+                width: 100%;
+            }
+        }
+        .MenuNavFooterBox{
+            text-align: center;
+            ul.menuNavFooter{
+                margin-bottom: 1rem;
+                li{
+                    display: inline-block;
+                    a{
+                        display: block;
+                        padding: 5px 15px;
+                        color: $rojo;
+                        transition: 0.3s;
+                        text-shadow: 1px 1px 3px black;
+                        font-size: 20px;
+                        margin-top: 1rem;
+                        &:hover{
+                            color: $blanco;
+                            &::after{
+                                border-top: 15px solid $blanco;
+                            }
+                        }
+                        &::after{
+                            content: "";
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            border-left: 10px solid transparent;
+                            border-top: 15px solid $rojo;
+                            border-right: 10px solid transparent;
+                            margin: 0 auto;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+            ul.socialNavFooter{
+                li{
+                    display: inline-block;
+                    a{
+                        color: $blanco;
+                        font-size: 18px;
+                        display: block;
+                        width: 40px;
+                        
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            ul.contactNavFooter{
+                li{
+                    color: $blanco;
+                    &.mailFooter{
+                        a{
+                            font-size: 22px;
+                        }
+                    }
+                    &.telFoote{
+                        a{
+                            font-size: 14px;
+                        }
+                    }
+                    a{
+                        font-style: italic;
+                        color: $blanco;
+                        display: inline-block;
+                        padding: 3px 2px;
+                    }
+                }
+            }
+        }
+    }
+}

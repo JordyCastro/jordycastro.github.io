@@ -1,0 +1,504 @@
+.owl-dots{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1rem;
+    .owl-dot{
+        display: block;
+        background: $rojo !important;
+        width: 20px;
+        height: 20px;
+        transition: 0.3s ease;
+        margin: 0 5px;
+        border-radius: 10px;
+        padding-top: 1rem;
+        border: 2px solid white !important;
+        &.active{
+            
+            width: 30px;
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .owl-carousel .owl-nav.disabled {
+        display: none!important;
+    }
+}
+
+section.baner-principal{
+    background-image: url("../images/main-img-banner-1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    align-content: center;
+    .container{
+        padding: 4rem 0;
+        .card-body{
+            max-width: 500px;
+            .card-title{
+                font-size: 60px;
+                line-height: 1;
+            }
+            .btn{
+                background-color: $azul;
+                border-color: #B2965F!important;
+                border:2px solid;
+                color: $blanco;
+                font-weight: bold!important;
+                font-size: 25px;
+                border-radius: 16px;
+                padding: 8px 17px;
+                span{
+                    display: inline-block;
+                    width: 39px;
+                    vertical-align: middle;
+                    margin-top: -12px;
+                    margin-left: 9px;
+                    img{
+                        width: 100%;
+                        vertical-align: inherit;
+                    }
+                    
+                }
+                &::after{
+                    content: "";
+                    background-image: url("../images/arrow-right-white.png");
+                    background-position: center;
+                    background-size: cover;
+                    display: inline-block;
+                    width: 14px;
+                    height: 19px;
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 991px) {
+        margin-top: 64px;
+        background-position-x: 60%;
+    }
+}
+
+
+section.n_views{
+    background-image: url("../images/red-cinta8202024.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    .container{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .row{
+            p{
+                color: $blanco;
+                margin: 0;
+                @include font-face(900);
+                font-style: italic;
+                font-size: 45px;
+                span{
+                    @include font-face(900);
+                }
+            }
+
+        }
+    }
+}
+@mixin fontTitle{
+    font-size: 45px;
+    font-weight: bolder;
+    @media screen and (min-width:768px) {
+        font-size: 75px;
+        line-height: 76px;
+        
+    }
+}
+section.about_us{
+    background-image: url("../images/baner-about-us.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    align-content: center;
+    @media screen and (max-width:1024px) {
+        background-position-x: 40%;
+    }
+    .container{
+        background: none;
+        .row{
+            div{
+                align-content: center; 
+                div{
+                    .card-title{
+                        @include fontTitle();                     
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.whats_bulls_pedia{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    align-content: center;
+    @media screen and (max-width: 1024px) {
+        background-position-x: 60%;
+    }
+    .container{
+        background: none;
+        .row{
+            flex-direction: row-reverse;
+            div{
+                @media screen and (max-width: 768px) {
+                    align-content: center;
+                    padding: 0 0 2rem;
+                } 
+                div{
+                    .card-title{
+                        @include fontTitle();
+                        font-size: 55px;
+                        span{
+                            font-size: 95px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+section.register_comunity{
+    .container{
+        form{
+            margin: 0;
+            justify-content: center;
+            h5{
+                color: $blanco;
+                font-style: italic;
+                margin-bottom: 0;
+                @media screen and (max-width:1023px) {
+                    text-align: center;
+                    margin-bottom: 1rem;
+                    font-size: 30px;
+                }
+            }
+            div{
+                align-content: center;
+                input{
+                    display: block;
+                    padding: .375rem .75rem;
+                    font-size: 1rem;
+                    line-height: 1.5;
+                    color: #212529;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #ced4da;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    border-radius: .25rem;
+                    width: 100%;
+                    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                    @media screen and (max-width:1023px) {
+                        margin-bottom: 1rem;
+                    }
+                }
+                button{
+                    color: $blanco;
+                    background-color: $rojo;
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+}
+section.the_best_american_bullies,
+section.future-products{
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0 120px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    align-content: center;
+    .container{
+        > .card-title{
+            font-size: 45px;
+            text-align: center;
+            padding-top: 25px;
+        }
+        .owl-carousel{
+            
+            .owl-stage-outer{
+                .owl-stage{
+                    .owl-item{
+                        justify-content: center;
+                        display: flex;
+                        flex-wrap: wrap;
+                        .card{
+                            max-width: 270px;
+                            text-align: center;
+                            .card-body{
+                                padding: 0;
+                                border: 4px solid $rojo;
+                                border-radius: 29px;
+                                overflow: hidden;
+                                img {
+                                    width: 100%;
+                                }
+                                div{
+                                    position: relative;
+                                    height: 100px;
+                                    z-index: 0;
+                                    align-content: center;
+                                    &::before{
+                                        background-image: url("../images/bestDogBG.png");
+                                        position: absolute;
+                                        background-size: cover;
+                                        background-repeat: no-repeat;
+                                        content: "";
+                                        height: 190%;
+                                        width: 100%;
+                                        z-index: -1;
+                                        left: 0;
+                                        bottom: 0;
+                                    }
+                                    .card-title{
+                                        padding: 10px 10px 30px;
+                                        color: $blanco;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                            > a {
+                                color: $blanco;
+                                font-weight: 200 !important;
+                                margin-top: 1rem;
+                                text-shadow: 1px 1px 3px $negro;
+                            }
+                        }
+                    }
+                }
+            }
+            .owl-nav{
+                display: flex;
+                flex-wrap: wrap;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                justify-content: space-between;
+                height: 0;
+                button{
+                    width: 40px;
+                    height: 53px;
+                    position: relative;
+                    &.disabled{
+                        opacity: 0;
+                        transition: 0.2s ;
+                    }
+                    &.owl-prev{
+                        @media screen and (max-width: 768px) {
+                            margin-left: 0!important;
+                        }
+                        margin-left: -40px;
+                        
+                        &::after{
+                            content: "";
+                            background-image: url("../images/arrow-left.png");
+                            background-position: center;
+                            background-size: cover;
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                    &.owl-next{
+                        margin-right: -40px;
+                        @media screen and (max-width: 768px) {
+                            margin-right: 0!important;
+                        }
+                        
+                        &::after{
+                            content: "";
+                            background-image: url("../images/arrow-right.png");
+                            background-position: center;
+                            background-size: cover;
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                    span{
+                        font-size: 20px;
+                        color: transparent;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+section.the_best_american_bullies{
+    .container{
+        > .card-title{
+            margin-bottom: 55px;
+            text-shadow: 0px 0px 10px black;
+        }
+    }
+}
+section.order-certificate{
+    position: relative;
+    > img {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        display: block;
+        z-index: -1;
+    }
+    .container{
+        .left{
+            align-content: center;
+            padding-left: 0;
+            .card-body{
+                padding-left: 0;
+                .card-title, span{
+                    font-size: 45px;
+                    font-style: italic;
+                    line-height: 1;
+                    
+                }
+                .card-title{
+                    @media screen and (max-width: 767px) {
+                        padding: 2rem 0 0;
+                        text-align: center;
+                    }
+                }
+                .card-text{
+                    font-size: 22px;
+                    @media screen and (max-width: 767px) {
+                        text-align: center;
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    padding: 0;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                padding: 0;
+            }
+        }
+        .right{
+            .card-body{
+                background-image: url("../images/mosaico-bg.png");
+                text-align: center;
+                padding: 30px 0;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -56px;
+                margin-bottom: -46px;
+                border-radius: 25px;
+                .card-title{
+                    color: $rojo;
+                    font-style: italic;
+                    font-size: 35px;
+                    span{
+                        display: block;
+                        color: $azul;
+                        font-size: 55px;
+                    }
+                }
+                .card-text{
+                    width: 300px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    &.textBlue{
+                        color: $azul;
+                        font-size: 20px;
+                        max-width: 200px;
+                        line-height: 17px;
+                        font-weight: bolder !important;
+                        margin-top: 15px;
+                    }
+                }
+                .btnCertificate{
+                    background-image: url('../images/bg-main-menu-nav.png');
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    padding: 7px 20px 5px;
+                    color: $blanco;
+                    box-shadow: 1px 1px 10px $negro;
+                    border-radius: 10px;
+                    margin-bottom: 35px ;
+                    margin-top: 10px;
+                    font-size: 25px;
+                    font-weight: 600!important;
+                    
+                    &::after{
+                        content: "";
+                        background-image: url("../images/arrow-right-white.png");
+                        background-position: center;
+                        background-size: cover;
+                        display: inline-block;
+                        width: 22px;
+                        height: 30px;
+                        margin-left: 12px;
+                        margin-bottom: -6px;
+                    }
+                    @media screen and (max-width: 991px) {
+                        width: 85%;
+                        border-radius: 20px;
+                    }
+                }
+                .lineaDivisora{
+                    display: block;
+                    background-image: url("../images/lineaDivisora.png");
+                    background-size: cover;
+                    color: transparent;
+                }
+                @media screen and (max-width: 767px) {
+                    margin-top: 0;
+                    margin-bottom: 50px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                padding: 1rem 0 0;
+            }
+        }
+    }
+}
+section.future-products{
+    background-size: cover;
+    padding: 120px 0 30px;
+    .container{
+        > .card-title{
+            color: $blanco;
+            font-size: 55px;
+        }
+    }
+
+}
+section.the_best_events{
+    padding-left: 0;
+    padding-right: 0;
+    img{
+        width: 100%;
+    }
+}
